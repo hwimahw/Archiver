@@ -9,15 +9,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Archive.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Archiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Archiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/Archive.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/Archive.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Archive.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/Archiver/aa.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/Archiver/as/aa.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Archiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Archiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Archiver.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Archiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Archiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Archive.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Archiver/aa.txt" beforeDir="false" />
@@ -97,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Archiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+            <state relative-caret-position="126">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,7 +146,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Archiver2.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Archiver2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
               <caret line="162" column="37" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="49" />
@@ -285,8 +283,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/resources/as" />
     </key>
   </component>
@@ -332,12 +330,12 @@
       <workItem from="1578980569759" duration="11581000" />
       <workItem from="1579065885150" duration="13103000" />
       <workItem from="1579157566476" duration="10923000" />
-      <workItem from="1579238352431" duration="11151000" />
+      <workItem from="1579238352431" duration="11313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55384000" />
+    <option name="totallyTimeSpent" value="55546000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,16 +357,16 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48939395" weight="0.329806" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7568182" visible="true" weight="0.25044093" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48863637" weight="0.329806" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7568182" weight="0.15873016" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49772727" weight="0.39858907" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.107583776" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49924242" weight="0.46031746" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6840909" weight="0.25925925" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.68333334" visible="true" weight="0.25925925" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.24318182" side_tool="true" visible="true" weight="0.25044093" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31666666" side_tool="true" visible="true" weight="0.25925925" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -444,7 +442,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/ff/newFile.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Archiver2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Archiver2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="162" column="37" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="49" />
@@ -466,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Archiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+        <state relative-caret-position="126">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
