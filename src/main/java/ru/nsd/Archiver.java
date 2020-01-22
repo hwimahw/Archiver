@@ -1,3 +1,5 @@
+package ru.nsd;
+
 import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -5,12 +7,32 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class Archiver {
+
     public static void main(String[] args) throws Exception{
-      //  zip(args);
-        // unzip();
-        //    ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream("./src/main/resources/Archive.zip"));
-     //   zip(args, zipOutputStream);
-        addNewFilesToArchive(args);
+
+        ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream("./src/main/resources/Archive.zip"));
+        zip(args, zipOutputStream);
+      //  addNewFilesToArchive(args);
+        unzip();
+    }
+
+    public static void setCommentToArchive(String comment) throws Exception{
+        ZipFile zipFile = new ZipFile("./src/main/resources/Archive.zip");
+        System.out.println(zipFile.getComment());
+        zipFile.close();
+        ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream("./src/main/resources/Archive.zip"));
+        zipOutputStream.setComment(comment);
+        zipOutputStream.close();
+        zipFile = new ZipFile("./src/main/resources/Archive.zip");
+        System.out.println(zipFile.getComment() + "!!!");
+        zipFile.close();
+    }
+
+    public static String getCommentFromArchive() throws Exception{
+        ZipFile zipFile = new ZipFile("./src/main/resources/Archive.zip");
+        String comment = zipFile.getComment();
+        zipFile.close();
+        return comment;
     }
 
     public static void zip(String[] nameOfFiles, ZipOutputStream zipOutputStream) throws Exception{
@@ -27,19 +49,14 @@ public class Archiver {
         pathForZipEntry.append(file.getName());
         if(file.isDirectory()){
             pathForZipEntry.append(File.separator);
-            System.out.println(file.getPath() + "!");
             ZipEntry zipEntry = new ZipEntry(file.getPath() + "/"); // с помощью file.getPath в архиве будут создаваться папки
-            System.out.println(pathForZipEntry.toString()+"@@@@@");
-            System.out.println(file.getPath());
             zipOutputStream.putNextEntry(zipEntry);
             zipOutputStream.closeEntry();
             File[] files = file.listFiles();
-            System.out.println(22222222);
             for(int i = 0; i < files.length; i++) {
                 zipRecursive(pathForZipEntry,files[i], zipOutputStream);
             }
         }else {
-            //  System.out.println(pathForZipEntry.toString()+"@@@@@");
             ZipEntry zipEntry = new ZipEntry(pathForZipEntry.toString()); // с помощью file.getPath в архиве будут создаваться папки
             zipOutputStream.putNextEntry(zipEntry);
             FileInputStream fileInputStream = new FileInputStream(file);
@@ -58,15 +75,15 @@ public class Archiver {
         while((zipEntry = zipInputStream.getNextEntry()) != null){
             String fileNameInArchive = zipEntry.getName();
             File file = new File(destDir + File.separator + fileNameInArchive);
-          //  System.out.println("Unzipping to "+file.getAbsolutePath());
-            //create directories for sub directories in zip
-            new File(file.getParent()).mkdirs();
+            System.out.println(file.getParent());
+            System.out.println(new File(file.getParent()).mkdirs());
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             write(fileOutputStream, zipFile.getInputStream(zipEntry));
         }
+        zipInputStream.close();
     }
 
-    public static void write(OutputStream outputStream , InputStream inputStream) throws Exception{
+    private static void write(OutputStream outputStream , InputStream inputStream) throws Exception{
         byte[] bytes = new byte[1024];
         int length;
         while((length = inputStream.read(bytes)) >= 0) {
@@ -75,17 +92,16 @@ public class Archiver {
         inputStream.close();
     }
 
-    public static void addNewFilesToArchive(String[] newFileNames) throws Exception{
+    public static void addNewFilesToArchive(String[] newFileNames) throws Exception {
         ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream("./src/main/resources/Archive2.zip"));
         ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream("./src/main/resources/Archive.zip"));
         ZipEntry zipEntry;
-        while((zipEntry = zipInputStream.getNextEntry()) != null){
+        while ((zipEntry = zipInputStream.getNextEntry()) != null) {
             zipOutputStream.putNextEntry(zipEntry);
             zipOutputStream.closeEntry();
         }
         System.out.println(newFileNames[0]);
         zip(newFileNames, zipOutputStream);
-
 
         File file = new File("./src/main/resources/Archive.zip");
         file.delete();
@@ -93,5 +109,4 @@ public class Archiver {
         newArchive.renameTo(file);
         zipOutputStream.close();
     }
-
 }
